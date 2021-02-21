@@ -20,7 +20,9 @@ import {GET_CHARACTER_INFO_REQUEST} from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
   const {character} = state.character;
-  return {character};
+  return {
+    ...state,
+    character};
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -33,6 +35,7 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 const CharacterDetailView = ({character, getCharacterInfo}) => {
+
   useEffect(() => {
     getCharacterInfo();
   }, [getCharacterInfo]);

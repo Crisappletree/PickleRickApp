@@ -1,4 +1,4 @@
-import React, {useEffect} from 'react';
+import React, {useEffect, useState} from 'react';
 
 import {
   Container,
@@ -16,7 +16,7 @@ import {useNavigation} from '@react-navigation/native';
 import globalStyles from '../styles/global';
 
 import {connect} from 'react-redux';
-import {GET_ALL_CHARACTER_INFO_REQUEST} from '../models/character/actions';
+import {GET_ALL_CHARACTER_INFO_REQUEST, GET_CHARACTER_ID} from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
   const {characters} = state.characters;
@@ -30,10 +30,20 @@ const mapDispatchToProps = (dispatch, props) => ({
       payload: {},
     });
   },
+  getCarachterId: (id) => {
+    dispatch({
+      type: GET_CHARACTER_ID,
+      payload: {
+        characterId: id
+      },
+    });
+  },
 });
 
-const CharactersView = ({characters, getAllCharacterInfo}) => {
+
+const CharactersView = ({characters, getAllCharacterInfo, getCarachterId}) => {
   const navigation = useNavigation();
+
 
   useEffect(() => {
     getAllCharacterInfo();
@@ -51,7 +61,9 @@ const CharactersView = ({characters, getAllCharacterInfo}) => {
                 <Body>
                   <Thumbnail style={globalStyles.image} source={{uri: image}} />
                   <Text 
-                   onPress={() => navigation.navigate('CharactersDetail')}
+                   onPress={() => {
+                    getCarachterId(id) 
+                    navigation.navigate('CharactersDetail')}}
                   style={globalStyles.name}>{name}</Text>
                   {/* <Text>{status}</Text>
                     <Text>{species}</Text>

@@ -1,9 +1,15 @@
-import {GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS, GET_CHARACTER_INFO_REQUEST_SUCCESS} from './actions';
+import {
+  GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+  GET_CHARACTER_INFO_REQUEST_SUCCESS,
+  GET_CHARACTER_ID,
+} from './actions';
 
 const initialState = {
   characters: [],
-  character: []
+  characterId: {},
+  character: {},
 };
+
 
 // Get all Characters Reducer
 const charactersReducer = (state = initialState, action) => {
@@ -12,14 +18,26 @@ const charactersReducer = (state = initialState, action) => {
       const {characters} = action.payload;
 
       return {
-        ...state,
-        characters
+        characters,
       };
     }
     default:
       return state;
   }
 };
+
+const characterIdReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_CHARACTER_ID: {
+      const {characterId} = action.payload;
+      return {
+        characterId,
+      };
+    }
+    default:
+      return state;
+    }
+  };
 
 // get one character by id reducer
 const characterReducer = (state = initialState, action) => {
@@ -28,8 +46,7 @@ const characterReducer = (state = initialState, action) => {
       const {character} = action.payload;
 
       return {
-        ...state,
-        character
+        character,
       };
     }
     default:
@@ -37,5 +54,4 @@ const characterReducer = (state = initialState, action) => {
   }
 };
 
-
-export {charactersReducer, characterReducer};
+export {charactersReducer, characterReducer, characterIdReducer};

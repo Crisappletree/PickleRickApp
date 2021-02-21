@@ -1,11 +1,14 @@
-import {takeEvery, put, call} from 'redux-saga/effects';
+import {takeEvery, put, call, select} from 'redux-saga/effects';
 import {
   GET_ALL_CHARACTER_INFO_REQUEST,
   GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+  GET_CHARACTER_ID,
   GET_CHARACTER_INFO_REQUEST,
   GET_CHARACTER_INFO_REQUEST_SUCCESS,
 } from './actions';
 import {queryApi} from '../query-api';
+
+import { getCharacterId } from '../../utils/selectors'
 
 
 
@@ -34,16 +37,31 @@ function* getAllCharacterInfo(action) {
     // Handle error
   }
 }
+// Setting character ID from characters view to Action Payload
+function* handleGetcharacterId() {
+  const id = GET_CHARACTER_ID.payload
+  yield put({
+    type: GET_CHARACTER_ID,
+    payload: {
+      characterId: id
+    }
+  })
+  console.log(GET_CHARACTER_ID.payload)
+}
 
+
+// Handle get One Character
 function* handlerGetCharacter() {
   yield takeEvery(GET_CHARACTER_INFO_REQUEST, getCharacterInfo);
 }
 
 function* getCharacterInfo(action) {
   try {
+    const id = yield select(getCharacterId)
+    console.log(id)
     const getCharacter = yield call(queryApi, {
       // TODO Replace /2 by id when allowed
-      endpoint: `/character/2`,
+      endpoint: `/character/${id}`,
       method: 'GET',
     });
 
@@ -60,4 +78,4 @@ function* getCharacterInfo(action) {
   }
 }
 
-export {handlerGetAllCharacters, handlerGetCharacter};
+export {handlerGetAllCharacters, handlerGetCharacter, handleGetcharacterId};
