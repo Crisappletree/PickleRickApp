@@ -1,3 +1,3 @@
 const API_URL = 'https://rickandmortyapi.com/api';
 
-export {API_URL}
+export {API_URL};

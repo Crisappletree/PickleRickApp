@@ -1,52 +1,71 @@
-import React, { useEffect } from 'react';
+import React, {useEffect} from 'react';
 
-import { View, Text } from 'react-native';
+import {
+  Container,
+  Content,
+  Card,
+  CardItem,
+  Thumbnail,
+  Text,
+  Body,
+} from 'native-base';
+
+import {useNavigation} from '@react-navigation/native';
+
+// Styles
+import globalStyles from '../styles/global';
+
 import {connect} from 'react-redux';
-import {GET_CHARACTERS_INFO_REQUEST} from '../models/characters/actions'
+import {GET_ALL_CHARACTER_INFO_REQUEST} from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
-    const {id, name, status, species, gender, image} = state.character;
-
-    return {
-        id,
-        name,
-        status,
-        species,
-        gender,
-        image,
-      };
-}
+  const {characters} = state.characters;
+  return {characters};
+};
 
 const mapDispatchToProps = (dispatch, props) => ({
-    getCharactersInfo: () => {
-        dispatch({
-            type: GET_CHARACTERS_INFO_REQUEST,
-            payload: {},
-        })
-    }
-})
+  getAllCharacterInfo: () => {
+    dispatch({
+      type: GET_ALL_CHARACTER_INFO_REQUEST,
+      payload: {},
+    });
+  },
+});
 
-const CharactersView = ({ id, name, status, species, gender, image, getCharactersInfo }) => {
+const CharactersView = ({characters, getAllCharacterInfo}) => {
+  const navigation = useNavigation();
 
-    useEffect(() => {
-        getCharactersInfo()
-    }, [getCharactersInfo])
+  useEffect(() => {
+    getAllCharacterInfo();
+  }, [getAllCharacterInfo]);
 
-    return (
-        <View style={{flex: 1, flexDirection: 'column'}}>
-            <Text>{id}</Text>
-            <Text>{name}</Text>
-            <Text>{status}</Text>
-            <Text>{species}</Text>
-            <Text>{gender}</Text>
-        </View>
-    );
-}
+  return (
+    <Container style={globalStyles.container}>
+      <Content style={globalStyles.content}>
+        <Card>
+          {characters.map((character, i) => {
+            const {id, name, status, species, gender, image} = character;
 
-const Characters = connect(
-    mapStateToProps,
-    mapDispatchToProps,
+            return (
+              <CardItem key={id} style={globalStyles.card}>
+                <Body>
+                  <Thumbnail style={globalStyles.image} source={{uri: image}} />
+                  <Text 
+                   onPress={() => navigation.navigate('CharactersDetail')}
+                  style={globalStyles.name}>{name}</Text>
+                  {/* <Text>{status}</Text>
+                    <Text>{species}</Text>
+                    <Text>{gender}</Text> */}
+                </Body>
+              </CardItem>
+            );
+          })}
+        </Card>
+      </Content>
+    </Container>
+  );
+};
 
-)(CharactersView)
+const Characters = connect(mapStateToProps, mapDispatchToProps)(CharactersView);
 
 export default Characters;

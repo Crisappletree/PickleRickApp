@@ -1,47 +1,48 @@
-import { call, put, select } from 'redux-saga/effects';
+import {call, select} from 'redux-saga/effects';
+import {API_URL} from '../utils/config/urls';
 
-// API URL for fetch data
-import {API_URL} from '../utils/config/urls'
+function* queryApi({endpoint, method, body = null}) {
+  const state = yield select();
+  const res = yield call(makeRequest, {
+    endpoint,
+    method,
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      ...body,
+    }),
+  });
 
+  if (res.status === 401) {
 
-function* queryAPI({endpoint, method, body = null}) {
-    const state = yield select();
-    const res = yield call(makeRequest, {
-        endpoint,
-        method,
-        headers: {
-            'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-            ...body
-        })
-    })
+  }
 
-    const parsedResponse = yield call(parseResponse, res);
-    if (!res.ok) {
-        // handle bad response
-    }
-    return parsedResponse
+  const parsedResponse = yield call(parseResponse, res);
+  if (!res.ok) {
+    // Handle bad response here
+  }
+
+  return parsedResponse;
 }
 
 const makeRequest = async ({endpoint, method, headers, body = null}) => {
-    return fetch(API_URL + endpoint, {
-        method,
-        headers,
-        body: body === '{}' ? undefined : body
-    })
-}
+  return fetch(API_URL + endpoint, {
+    method,
+    headers,
+    body: body === '{}' ? undefined : body,
+  });
+};
 
 const parseResponse = async response => {
-    let parsedResponse;
+  let parsedResponse;
+  try {
+    parsedResponse = await response.json();
+  } catch {
+    parsedResponse = await response.text();
+  }
 
-    try {
-        parsedResponse = await response.json();
-    } catch (err) {
-        console.log(err)
-    }
+  return parsedResponse;
+};
 
-    return parsedResponse
-}
-
-export {queryAPI}
+export {queryApi};
