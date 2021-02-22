@@ -21,7 +21,6 @@ import {GET_CHARACTER_INFO_REQUEST} from '../models/character/actions';
 const mapStateToProps = (state, props) => {
   const {character} = state.character;
   return {
-    ...state,
     character};
 };
 

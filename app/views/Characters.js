@@ -10,17 +10,25 @@ import {
   Body,
 } from 'native-base';
 
+import {FlatList} from 'react-native';
+
 import {useNavigation} from '@react-navigation/native';
 
 // Styles
 import globalStyles from '../styles/global';
 
 import {connect} from 'react-redux';
-import {GET_ALL_CHARACTER_INFO_REQUEST, GET_CHARACTER_ID} from '../models/character/actions';
+import {
+  GET_ALL_CHARACTER_INFO_REQUEST,
+  GET_CHARACTER_ID,
+  GET_MORE_CHARACTER_INFO_REQUEST,
+} from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
-  const {characters} = state.characters;
-  return {characters};
+  const {characters} = state.characters.characters;
+  const {info} = state.characters.info;
+  console.log(state)
+  return {characters, info};
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -30,20 +38,32 @@ const mapDispatchToProps = (dispatch, props) => ({
       payload: {},
     });
   },
+  getMoreCharacterInfo: (info) => {
+    dispatch({
+      type: GET_MORE_CHARACTER_INFO_REQUEST,
+      payload: {
+        moreCharactersURL: info,
+      },
+    });
+  },
   getCarachterId: (id) => {
     dispatch({
       type: GET_CHARACTER_ID,
       payload: {
-        characterId: id
+        characterId: id,
       },
     });
   },
 });
 
-
-const CharactersView = ({characters, getAllCharacterInfo, getCarachterId}) => {
+const CharactersView = ({
+  characters,
+  info,
+  getAllCharacterInfo,
+  getCarachterId,
+  getMoreCharacterInfo
+}) => {
   const navigation = useNavigation();
-
 
   useEffect(() => {
     getAllCharacterInfo();
@@ -51,29 +71,38 @@ const CharactersView = ({characters, getAllCharacterInfo, getCarachterId}) => {
 
   return (
     <Container style={globalStyles.container}>
-      <Content style={globalStyles.content}>
-        <Card>
-          {characters.map((character, i) => {
-            const {id, name, status, species, gender, image} = character;
-
+      <FlatList
+        data={characters}
+        // onEndReachedThreshold={0.5}
+        onEndReached={console.log('end reached')}
+        onEndReachedThreshold={0.5}
+        keyExtractor={(item) => item.id.toString()}
+        renderItem={({item}) => {
+          if (item) {
             return (
-              <CardItem key={id} style={globalStyles.card}>
+              <CardItem key={item.id} style={globalStyles.card}>
                 <Body>
-                  <Thumbnail style={globalStyles.image} source={{uri: image}} />
-                  <Text 
-                   onPress={() => {
-                    getCarachterId(id) 
-                    navigation.navigate('CharactersDetail')}}
-                  style={globalStyles.name}>{name}</Text>
-                  {/* <Text>{status}</Text>
-                    <Text>{species}</Text>
-                    <Text>{gender}</Text> */}
+                  <Thumbnail
+                    style={globalStyles.image}
+                    source={{uri: item.image}}
+                  />
+                  <Text
+                    onPress={() => {
+                      getCarachterId(item.id);
+                      navigation.navigate('CharactersDetail');
+                    }}
+                    style={globalStyles.name}>
+                    {item.name}
+                  </Text>
                 </Body>
               </CardItem>
             );
-          })}
-        </Card>
-      </Content>
+          }
+        }}
+        
+        onEndReachedThreshold={0.5}
+        onEndReached={() => {getMoreCharacterInfo(info)}}
+      />
     </Container>
   );
 };

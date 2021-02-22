@@ -1,11 +1,13 @@
 import {
   GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+  GET_MORE_CHARACTER_INFO_REQUEST_SUCCESS,
   GET_CHARACTER_INFO_REQUEST_SUCCESS,
   GET_CHARACTER_ID,
 } from './actions';
 
 const initialState = {
-  characters: [],
+  characters: {},
+  info: 'https://rickandmortyapi.com/api/character?page=1',
   characterId: {},
   character: {},
 };
@@ -16,9 +18,30 @@ const charactersReducer = (state = initialState, action) => {
   switch (action.type) {
     case GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS: {
       const {characters} = action.payload;
+      const {info} = action.payload;
 
       return {
-        characters,
+        ...state,
+        characters: {...state.characters, characters},
+        info
+      };
+    }
+    default:
+      return state;
+  }
+};
+
+// Get all Characters Reducer
+const moreCharactersReducer = (state = initialState, action) => {
+  switch (action.type) {
+    case GET_MORE_CHARACTER_INFO_REQUEST_SUCCESS: {
+      const {characters} = action.payload;
+      const {info} = action.payload;
+
+      return {
+        ...state,
+        characters: {...state.characters, characters},
+        info
       };
     }
     default:
@@ -54,4 +77,4 @@ const characterReducer = (state = initialState, action) => {
   }
 };
 
-export {charactersReducer, characterReducer, characterIdReducer};
+export {charactersReducer, characterReducer, characterIdReducer, moreCharactersReducer};

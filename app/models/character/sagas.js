@@ -2,13 +2,15 @@ import {takeEvery, put, call, select} from 'redux-saga/effects';
 import {
   GET_ALL_CHARACTER_INFO_REQUEST,
   GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+  GET_MORE_CHARACTER_INFO_REQUEST,
+  GET_MORE_CHARACTER_INFO_REQUEST_SUCCESS,
   GET_CHARACTER_ID,
   GET_CHARACTER_INFO_REQUEST,
   GET_CHARACTER_INFO_REQUEST_SUCCESS,
 } from './actions';
 import {queryApi} from '../query-api';
 
-import { getCharacterId } from '../../utils/selectors'
+import { getCharacterId, infoURL} from '../../utils/selectors'
 
 
 
@@ -20,8 +22,9 @@ function* handlerGetAllCharacters() {
 // Getting all characters
 function* getAllCharacterInfo(action) {
   try {
+    
     const posts = yield call(queryApi, {
-      endpoint: '/character',
+      endpoint: `/character?page=1`,
       method: 'GET',
     });
 
@@ -29,7 +32,8 @@ function* getAllCharacterInfo(action) {
     yield put({
       type: GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
       payload: {
-        characters: posts.results
+        characters: posts.results,
+        info: posts.info.next
       },
     });
   } catch (err) {
@@ -37,7 +41,40 @@ function* getAllCharacterInfo(action) {
     // Handle error
   }
 }
-// Setting character ID from characters view to Action Payload
+
+function* handlerGetMoreCharacters() {
+  yield takeEvery(GET_MORE_CHARACTER_INFO_REQUEST, getMoreCharacterInfo);
+}
+
+// Getting all characters
+function* getMoreCharacterInfo(action) {
+  try {
+
+    const nextPageURL = yield select(infoURL)
+    const json = yield fetch(nextPageURL, {
+        method: 'GET',
+      })
+      .then((response) => response.json())
+              .then(data => {
+                  return data
+              })
+    // API call
+    yield put({
+      type: GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+      payload: {
+        characters: json.results,
+        info: json.info.next
+      },
+    });
+  } catch (err) {
+    console.log(err);
+    // Handle error
+  }
+}
+
+
+
+// Setting character ID from characters view
 function* handleGetcharacterId() {
   const id = GET_CHARACTER_ID.payload
   yield put({
@@ -46,7 +83,6 @@ function* handleGetcharacterId() {
       characterId: id
     }
   })
-  console.log(GET_CHARACTER_ID.payload)
 }
 
 
@@ -58,9 +94,7 @@ function* handlerGetCharacter() {
 function* getCharacterInfo(action) {
   try {
     const id = yield select(getCharacterId)
-    console.log(id)
     const getCharacter = yield call(queryApi, {
-      // TODO Replace /2 by id when allowed
       endpoint: `/character/${id}`,
       method: 'GET',
     });
@@ -78,4 +112,4 @@ function* getCharacterInfo(action) {
   }
 }
 
-export {handlerGetAllCharacters, handlerGetCharacter, handleGetcharacterId};
+export {handlerGetAllCharacters, handlerGetCharacter, handleGetcharacterId, handlerGetMoreCharacters};
