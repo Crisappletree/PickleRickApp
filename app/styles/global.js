@@ -38,8 +38,8 @@ const globalStyles = StyleSheet.create({
     color: 'lightgray'
   },
   detailInfoContainer: {
-    justifyContent: 'space-evenly',
-    alignItems: 'center'
+    alignItems: 'center',
+    width: '100%',
   },
   detailInfoContainers: {
     flexDirection: 'row',
