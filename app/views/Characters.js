@@ -25,27 +25,29 @@ import {
 } from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
-  const {characters} = state.characters.characters;
+  const {characters} = state.characters;
   const {info} = state.characters.info;
-  console.log(state)
+  console.log(state.characters.characters)
   return {characters, info};
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
-  getAllCharacterInfo: () => {
+  getAllCharacterInfo: (info) => {
     dispatch({
       type: GET_ALL_CHARACTER_INFO_REQUEST,
-      payload: {},
-    });
-  },
-  getMoreCharacterInfo: (info) => {
-    dispatch({
-      type: GET_MORE_CHARACTER_INFO_REQUEST,
       payload: {
         moreCharactersURL: info,
       },
     });
   },
+  // getMoreCharacterInfo: (info) => {
+  //   dispatch({
+  //     type: GET_MORE_CHARACTER_INFO_REQUEST,
+  //     payload: {
+  //       moreCharactersURL: info,
+  //     },
+  //   });
+  // },
   getCarachterId: (id) => {
     dispatch({
       type: GET_CHARACTER_ID,
@@ -101,7 +103,7 @@ const CharactersView = ({
         }}
         
         onEndReachedThreshold={0.5}
-        onEndReached={() => {getMoreCharacterInfo(info)}}
+        onEndReached={() => {getAllCharacterInfo(info)}}
       />
     </Container>
   );

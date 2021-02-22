@@ -22,33 +22,6 @@ function* handlerGetAllCharacters() {
 // Getting all characters
 function* getAllCharacterInfo(action) {
   try {
-    
-    const posts = yield call(queryApi, {
-      endpoint: `/character?page=1`,
-      method: 'GET',
-    });
-
-    // API call
-    yield put({
-      type: GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
-      payload: {
-        characters: posts.results,
-        info: posts.info.next
-      },
-    });
-  } catch (err) {
-    console.log(err);
-    // Handle error
-  }
-}
-
-function* handlerGetMoreCharacters() {
-  yield takeEvery(GET_MORE_CHARACTER_INFO_REQUEST, getMoreCharacterInfo);
-}
-
-// Getting all characters
-function* getMoreCharacterInfo(action) {
-  try {
 
     const nextPageURL = yield select(infoURL)
     const json = yield fetch(nextPageURL, {
@@ -71,6 +44,36 @@ function* getMoreCharacterInfo(action) {
     // Handle error
   }
 }
+
+function* handlerGetMoreCharacters() {
+  yield takeEvery(GET_MORE_CHARACTER_INFO_REQUEST, getMoreCharacterInfo);
+}
+
+// Getting all characters
+// function* getMoreCharacterInfo(action) {
+//   try {
+
+//     const nextPageURL = yield select(infoURL)
+//     const json = yield fetch(nextPageURL, {
+//         method: 'GET',
+//       })
+//       .then((response) => response.json())
+//               .then(data => {
+//                   return data
+//               })
+//     // API call
+//     yield put({
+//       type: GET_ALL_CHARACTER_INFO_REQUEST_SUCCESS,
+//       payload: {
+//         characters: json.results,
+//         info: json.info.next
+//       },
+//     });
+//   } catch (err) {
+//     console.log(err);
+//     // Handle error
+//   }
+// }
 
 
 
@@ -112,4 +115,4 @@ function* getCharacterInfo(action) {
   }
 }
 
-export {handlerGetAllCharacters, handlerGetCharacter, handleGetcharacterId, handlerGetMoreCharacters};
+export {handlerGetAllCharacters, handlerGetCharacter, handleGetcharacterId};
