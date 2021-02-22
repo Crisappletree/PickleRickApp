@@ -1,16 +1,8 @@
 import React, {useEffect, useState} from 'react';
 
-import {
-  Container,
-  Content,
-  Card,
-  CardItem,
-  Thumbnail,
-  Text,
-  Body,
-} from 'native-base';
+import {Container, CardItem, Thumbnail, Text, Body, Card} from 'native-base';
 
-import {FlatList} from 'react-native';
+import {FlatList, TouchableHighlight} from 'react-native';
 
 import {useNavigation} from '@react-navigation/native';
 
@@ -21,13 +13,11 @@ import {connect} from 'react-redux';
 import {
   GET_ALL_CHARACTER_INFO_REQUEST,
   GET_CHARACTER_ID,
-  GET_MORE_CHARACTER_INFO_REQUEST,
 } from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
   const {characters} = state.characters;
   const {info} = state.characters.info;
-  console.log(state.characters.characters)
   return {characters, info};
 };
 
@@ -40,14 +30,6 @@ const mapDispatchToProps = (dispatch, props) => ({
       },
     });
   },
-  // getMoreCharacterInfo: (info) => {
-  //   dispatch({
-  //     type: GET_MORE_CHARACTER_INFO_REQUEST,
-  //     payload: {
-  //       moreCharactersURL: info,
-  //     },
-  //   });
-  // },
   getCarachterId: (id) => {
     dispatch({
       type: GET_CHARACTER_ID,
@@ -63,7 +45,6 @@ const CharactersView = ({
   info,
   getAllCharacterInfo,
   getCarachterId,
-  getMoreCharacterInfo
 }) => {
   const navigation = useNavigation();
 
@@ -75,35 +56,34 @@ const CharactersView = ({
     <Container style={globalStyles.container}>
       <FlatList
         data={characters}
-        // onEndReachedThreshold={0.5}
-        onEndReached={console.log('end reached')}
-        onEndReachedThreshold={0.5}
         keyExtractor={(item) => item.id.toString()}
         renderItem={({item}) => {
           if (item) {
             return (
-              <CardItem key={item.id} style={globalStyles.card}>
-                <Body>
-                  <Thumbnail
-                    style={globalStyles.image}
-                    source={{uri: item.image}}
-                  />
-                  <Text
-                    onPress={() => {
-                      getCarachterId(item.id);
-                      navigation.navigate('CharactersDetail');
-                    }}
-                    style={globalStyles.name}>
-                    {item.name}
-                  </Text>
-                </Body>
-              </CardItem>
+              <TouchableHighlight
+                onPress={() => {
+                  getCarachterId(item.id);
+                  navigation.navigate('CharactersDetail');
+                }}>
+                <Card style={globalStyles.card}>
+                  <CardItem style={globalStyles.card}>
+                    <Body>
+                      <Thumbnail
+                        style={globalStyles.image}
+                        source={{uri: item.image}}
+                      />
+                      <Text style={globalStyles.name}>{item.name}</Text>
+                    </Body>
+                  </CardItem>
+                </Card>
+              </TouchableHighlight>
             );
           }
         }}
-        
         onEndReachedThreshold={0.5}
-        onEndReached={() => {getAllCharacterInfo(info)}}
+        onEndReached={() => {
+          getAllCharacterInfo(info);
+        }}
       />
     </Container>
   );

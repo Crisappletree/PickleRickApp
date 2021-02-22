@@ -3,43 +3,67 @@ import {StyleSheet} from 'react-native';
 const globalStyles = StyleSheet.create({
   container: {
     flex: 1,
+    backgroundColor: '#c7fa6c',
+    paddingVertical: 10,
+    paddingHorizontal: 10,
+    borderWidth: 10,
+    borderColor: '#7cbc6c',
+    borderRadius: 5,
   },
-  content: {
-      marginHorizontal: '2.5%',
-      flex: 1,
+  card: {
+    backgroundColor: '#3c3f44',
+    marginTop: 20,
+    marginVertical: 10,
+    borderRadius: 20,
+    marginHorizontal: '2.5%',
+    shadowOpacity: .2,
+    // shadow for android
+    elevation: 4
   },
-  button: {
-    backgroundColor: '#FFDA00',
-  },
-  textButton: {
-    textTransform: 'uppercase',
-    fontWeight: 'bold',
-    color: '#000',
+  image: {
+    height: 250,
+    width: '100%',
+    resizeMode: 'stretch',
+    borderRadius: 20,
   },
   name: {
     textAlign: 'center',
     alignSelf: 'center',
     marginTop: 40,
     marginBottom: 20,
-    fontSize: 30,
+    marginHorizontal: 20,
+    fontSize: 28,
     fontWeight: 'bold',
-    color: '#FFF'
+    fontFamily: 'Nunito-Bold',
+    color: 'lightgray'
   },
-  image: {
-    height: 250,
-    width: '100%'
+  detailInfoContainer: {
+    justifyContent: 'space-evenly',
+    alignItems: 'center'
   },
-  cantidad: {
-    marginVertical: 20,
+  detailInfoContainers: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    padding: 15,
+
+  },
+  detailInfoTitles: {
+    paddingHorizontal: 15,
     textAlign: 'center',
+    
     fontSize: 24,
-    fontWeight: 'bold'
+    fontFamily: 'Nunito-Bold',
+    color: 'lightgray'
   },
-  card: {
-    backgroundColor: '#3c3f44',
-    marginVertical: 10,
-    borderRadius: 20
-  } 
+  detailInfoText: {
+    paddingHorizontal: 15,
+    textAlign: 'center',
+    fontSize: 28,
+    fontWeight: 'bold',
+    fontFamily: 'Nunito-Regular',
+    color: 'white'
+  }
+
 });
 
 export default globalStyles;

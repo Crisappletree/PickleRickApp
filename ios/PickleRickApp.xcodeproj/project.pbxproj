@@ -8,18 +8,39 @@
 
 /* Begin PBXBuildFile section */
 		00E356F31AD99517003FC87E /* PickleRickAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PickleRickAppTests.m */; };
+		033296133FDC4147B96E1E8B /* Ionicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C7FA4D00EBD14D07991FFFC6 /* Ionicons.ttf */; };
 		07C41A5D8BBCEA5F786E5A64 /* libPods-PickleRickApp-tvOSTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = C71B793315A02BAB380282B0 /* libPods-PickleRickApp-tvOSTests.a */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		1A221A65B95BD42C55174F98 /* libPods-PickleRickApp-PickleRickAppTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3413E9567BDD8B293C509384 /* libPods-PickleRickApp-PickleRickAppTests.a */; };
+		1D693EDC74544F26AD21D52B /* Feather.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BB7E89670001458180647D87 /* Feather.ttf */; };
+		2234C21C3656469BB6D7FF7F /* Octicons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C122538D65A34235BAB12D83 /* Octicons.ttf */; };
 		2D02E4BC1E0B4A80006451C7 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.m */; };
 		2D02E4BD1E0B4A84006451C7 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		2D02E4BF1E0B4AB3006451C7 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		2DCD954D1E0B4F2C00145EB5 /* PickleRickAppTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* PickleRickAppTests.m */; };
+		4026240E351A41A683941EF0 /* rubicon-icon-font.ttf in Resources */ = {isa = PBXBuildFile; fileRef = A8D6B8AB36EF44D0B7FD52DB /* rubicon-icon-font.ttf */; };
+		490751400B4845AF9E233A55 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = E36D213657D34314BA2D9C06 /* Nunito-Regular.ttf */; };
+		5B237D23351C4154AF22BFAA /* FontAwesome.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 57F5534BE80840D7A87EDC2B /* FontAwesome.ttf */; };
+		5CC14C7C1B734368859C1D5E /* MaterialCommunityIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 0DEB0088956247CF97DC4D8B /* MaterialCommunityIcons.ttf */; };
+		63FF0091EF404DF3A9C880D2 /* EvilIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 135F1C96EE764B9AAFCBED7B /* EvilIcons.ttf */; };
+		6BCE3240B48444A7AE0803A4 /* Zocial.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 55A45102D78A44CE92CC22BD /* Zocial.ttf */; };
+		6F803DF0730C40B2B56E04F8 /* FontAwesome5_Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 85F27328DBAD42AC9D24D6CA /* FontAwesome5_Regular.ttf */; };
+		7002F2ED6ECD4A789A7B07B3 /* SimpleLineIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9097FC7116204E1592CF75C7 /* SimpleLineIcons.ttf */; };
 		71018E015FD7995B42F43851 /* libPods-PickleRickApp.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 84E908A27DE28C917D44D3A0 /* libPods-PickleRickApp.a */; };
+		7E2FFE68E85B460CB67EBA13 /* FontAwesome5_Solid.ttf in Resources */ = {isa = PBXBuildFile; fileRef = D23065750BAF4863805A419B /* FontAwesome5_Solid.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		83E936775A5A444FBB3AB2AA /* MaterialIcons.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6CE751C914C144338C072C59 /* MaterialIcons.ttf */; };
+		8D4587A5EFE2459588A59C39 /* Entypo.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 9AE396FC4D744CA4A0D15EAD /* Entypo.ttf */; };
+		96540FA6AC724EB4B88EA0D2 /* Roboto_medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 12ED635B566549F9B0C0A3A2 /* Roboto_medium.ttf */; };
+		B43E59660C9147D7B54B54C2 /* Foundation.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 4F7BBC4451774A6FA1E93DBF /* Foundation.ttf */; };
+		B5911DDC58F04737A5FF5BC7 /* FontAwesome5_Brands.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 7A9EF800A447487695906253 /* FontAwesome5_Brands.ttf */; };
+		BACDF8A478464D419EBD45A1 /* AntDesign.ttf in Resources */ = {isa = PBXBuildFile; fileRef = C52FE63AD9D143EBAE0C8D43 /* AntDesign.ttf */; };
+		BE4160AAB0844B3993100EF6 /* Fontisto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = AA4287D75EF84DB88FBCE8D2 /* Fontisto.ttf */; };
 		C42C911130600129C4E974C0 /* libPods-PickleRickApp-PickleRickApp-tvOS.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 59AF7CD862015BF758456A58 /* libPods-PickleRickApp-PickleRickApp-tvOS.a */; };
+		CDB5C8D27A914639BC3DB5E7 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 29E21D96E60C4045B5396A89 /* Nunito-Bold.ttf */; };
+		DF34C5097CA74E8A9B49B8D8 /* Roboto.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 6A07CA961FD647D7A20F763A /* Roboto.ttf */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -44,6 +65,9 @@
 		00E356EE1AD99517003FC87E /* PickleRickAppTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PickleRickAppTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		00E356F21AD99517003FC87E /* PickleRickAppTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = PickleRickAppTests.m; sourceTree = "<group>"; };
+		0DEB0088956247CF97DC4D8B /* MaterialCommunityIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialCommunityIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialCommunityIcons.ttf"; sourceTree = "<group>"; };
+		12ED635B566549F9B0C0A3A2 /* Roboto_medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto_medium.ttf; path = "../node_modules/native-base/Fonts/Roboto_medium.ttf"; sourceTree = "<group>"; };
+		135F1C96EE764B9AAFCBED7B /* EvilIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = EvilIcons.ttf; path = "../node_modules/native-base/Fonts/EvilIcons.ttf"; sourceTree = "<group>"; };
 		13B07F961A680F5B00A75B9A /* PickleRickApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PickleRickApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = PickleRickApp/AppDelegate.h; sourceTree = "<group>"; };
 		13B07FB01A68108700A75B9A /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppDelegate.m; path = PickleRickApp/AppDelegate.m; sourceTree = "<group>"; };
@@ -52,20 +76,38 @@
 		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = PickleRickApp/main.m; sourceTree = "<group>"; };
 		158359340F69672ABBEE5559 /* Pods-PickleRickApp-tvOSTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-tvOSTests.debug.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-tvOSTests/Pods-PickleRickApp-tvOSTests.debug.xcconfig"; sourceTree = "<group>"; };
 		26ECF4CDCB701A726F27D5AA /* Pods-PickleRickApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-tvOS/Pods-PickleRickApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
+		29E21D96E60C4045B5396A89 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../app/assets/fonts/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		2B8D9348521C62A8769936F6 /* Pods-PickleRickApp-PickleRickApp-tvOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-PickleRickApp-tvOS.release.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-PickleRickApp-tvOS/Pods-PickleRickApp-PickleRickApp-tvOS.release.xcconfig"; sourceTree = "<group>"; };
 		2D02E47B1E0B4A5D006451C7 /* PickleRickApp-tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "PickleRickApp-tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2D02E4901E0B4A5D006451C7 /* PickleRickApp-tvOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "PickleRickApp-tvOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3413E9567BDD8B293C509384 /* libPods-PickleRickApp-PickleRickAppTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PickleRickApp-PickleRickAppTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3E997BCBD8B9ACF8E6D30321 /* Pods-PickleRickApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-tvOS/Pods-PickleRickApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
+		4F7BBC4451774A6FA1E93DBF /* Foundation.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Foundation.ttf; path = "../node_modules/native-base/Fonts/Foundation.ttf"; sourceTree = "<group>"; };
+		55A45102D78A44CE92CC22BD /* Zocial.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Zocial.ttf; path = "../node_modules/native-base/Fonts/Zocial.ttf"; sourceTree = "<group>"; };
+		57F5534BE80840D7A87EDC2B /* FontAwesome.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome.ttf; path = "../node_modules/native-base/Fonts/FontAwesome.ttf"; sourceTree = "<group>"; };
 		59AF7CD862015BF758456A58 /* libPods-PickleRickApp-PickleRickApp-tvOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PickleRickApp-PickleRickApp-tvOS.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6351AB3236CCC34C5DBA5AED /* Pods-PickleRickApp-PickleRickAppTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-PickleRickAppTests.release.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-PickleRickAppTests/Pods-PickleRickApp-PickleRickAppTests.release.xcconfig"; sourceTree = "<group>"; };
+		6A07CA961FD647D7A20F763A /* Roboto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Roboto.ttf; path = "../node_modules/native-base/Fonts/Roboto.ttf"; sourceTree = "<group>"; };
+		6CE751C914C144338C072C59 /* MaterialIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = MaterialIcons.ttf; path = "../node_modules/native-base/Fonts/MaterialIcons.ttf"; sourceTree = "<group>"; };
 		79CF63ED0D9E579337C2CAC0 /* Pods-PickleRickApp.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp.debug.xcconfig"; path = "Target Support Files/Pods-PickleRickApp/Pods-PickleRickApp.debug.xcconfig"; sourceTree = "<group>"; };
+		7A9EF800A447487695906253 /* FontAwesome5_Brands.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Brands.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Brands.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = PickleRickApp/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		84E908A27DE28C917D44D3A0 /* libPods-PickleRickApp.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PickleRickApp.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		85F27328DBAD42AC9D24D6CA /* FontAwesome5_Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Regular.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Regular.ttf"; sourceTree = "<group>"; };
 		871E0B3B2FED0A6CF4B14BFC /* Pods-PickleRickApp-PickleRickAppTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-PickleRickAppTests.debug.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-PickleRickAppTests/Pods-PickleRickApp-PickleRickAppTests.debug.xcconfig"; sourceTree = "<group>"; };
+		9097FC7116204E1592CF75C7 /* SimpleLineIcons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = SimpleLineIcons.ttf; path = "../node_modules/native-base/Fonts/SimpleLineIcons.ttf"; sourceTree = "<group>"; };
+		9AE396FC4D744CA4A0D15EAD /* Entypo.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Entypo.ttf; path = "../node_modules/native-base/Fonts/Entypo.ttf"; sourceTree = "<group>"; };
+		A8D6B8AB36EF44D0B7FD52DB /* rubicon-icon-font.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "rubicon-icon-font.ttf"; path = "../node_modules/native-base/Fonts/rubicon-icon-font.ttf"; sourceTree = "<group>"; };
+		AA4287D75EF84DB88FBCE8D2 /* Fontisto.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Fontisto.ttf; path = "../node_modules/native-base/Fonts/Fontisto.ttf"; sourceTree = "<group>"; };
 		B2D50C5CF0101D15C87D15BB /* Pods-PickleRickApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp.release.xcconfig"; path = "Target Support Files/Pods-PickleRickApp/Pods-PickleRickApp.release.xcconfig"; sourceTree = "<group>"; };
+		BB7E89670001458180647D87 /* Feather.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Feather.ttf; path = "../node_modules/native-base/Fonts/Feather.ttf"; sourceTree = "<group>"; };
+		C122538D65A34235BAB12D83 /* Octicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Octicons.ttf; path = "../node_modules/native-base/Fonts/Octicons.ttf"; sourceTree = "<group>"; };
+		C52FE63AD9D143EBAE0C8D43 /* AntDesign.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = AntDesign.ttf; path = "../node_modules/native-base/Fonts/AntDesign.ttf"; sourceTree = "<group>"; };
 		C71B793315A02BAB380282B0 /* libPods-PickleRickApp-tvOSTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PickleRickApp-tvOSTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		C7FA4D00EBD14D07991FFFC6 /* Ionicons.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = Ionicons.ttf; path = "../node_modules/native-base/Fonts/Ionicons.ttf"; sourceTree = "<group>"; };
 		CCD3AA3F40903BBE8D69B39E /* Pods-PickleRickApp-tvOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-tvOSTests.release.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-tvOSTests/Pods-PickleRickApp-tvOSTests.release.xcconfig"; sourceTree = "<group>"; };
+		D23065750BAF4863805A419B /* FontAwesome5_Solid.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = FontAwesome5_Solid.ttf; path = "../node_modules/native-base/Fonts/FontAwesome5_Solid.ttf"; sourceTree = "<group>"; };
+		E36D213657D34314BA2D9C06 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../app/assets/fonts/Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		ED2971642150620600B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = Platforms/AppleTVOS.platform/Developer/SDKs/AppleTVOS12.0.sdk/System/Library/Frameworks/JavaScriptCore.framework; sourceTree = DEVELOPER_DIR; };
 		FD90DA20C433581EF0D891FD /* Pods-PickleRickApp-PickleRickApp-tvOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PickleRickApp-PickleRickApp-tvOS.debug.xcconfig"; path = "Target Support Files/Pods-PickleRickApp-PickleRickApp-tvOS/Pods-PickleRickApp-PickleRickApp-tvOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -121,7 +163,6 @@
 				FD90DA20C433581EF0D891FD /* Pods-PickleRickApp-PickleRickApp-tvOS.debug.xcconfig */,
 				2B8D9348521C62A8769936F6 /* Pods-PickleRickApp-PickleRickApp-tvOS.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -185,6 +226,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				0096AB53E2B8DF2AA3F7B3DD /* Pods */,
+				9EDA4D89A2984F848BD1534B /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -200,6 +242,34 @@
 				2D02E4901E0B4A5D006451C7 /* PickleRickApp-tvOSTests.xctest */,
 			);
 			name = Products;
+			sourceTree = "<group>";
+		};
+		9EDA4D89A2984F848BD1534B /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				29E21D96E60C4045B5396A89 /* Nunito-Bold.ttf */,
+				E36D213657D34314BA2D9C06 /* Nunito-Regular.ttf */,
+				C52FE63AD9D143EBAE0C8D43 /* AntDesign.ttf */,
+				9AE396FC4D744CA4A0D15EAD /* Entypo.ttf */,
+				135F1C96EE764B9AAFCBED7B /* EvilIcons.ttf */,
+				BB7E89670001458180647D87 /* Feather.ttf */,
+				57F5534BE80840D7A87EDC2B /* FontAwesome.ttf */,
+				7A9EF800A447487695906253 /* FontAwesome5_Brands.ttf */,
+				85F27328DBAD42AC9D24D6CA /* FontAwesome5_Regular.ttf */,
+				D23065750BAF4863805A419B /* FontAwesome5_Solid.ttf */,
+				AA4287D75EF84DB88FBCE8D2 /* Fontisto.ttf */,
+				4F7BBC4451774A6FA1E93DBF /* Foundation.ttf */,
+				C7FA4D00EBD14D07991FFFC6 /* Ionicons.ttf */,
+				0DEB0088956247CF97DC4D8B /* MaterialCommunityIcons.ttf */,
+				6CE751C914C144338C072C59 /* MaterialIcons.ttf */,
+				C122538D65A34235BAB12D83 /* Octicons.ttf */,
+				12ED635B566549F9B0C0A3A2 /* Roboto_medium.ttf */,
+				6A07CA961FD647D7A20F763A /* Roboto.ttf */,
+				A8D6B8AB36EF44D0B7FD52DB /* rubicon-icon-font.ttf */,
+				9097FC7116204E1592CF75C7 /* SimpleLineIcons.ttf */,
+				55A45102D78A44CE92CC22BD /* Zocial.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,6 +369,7 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
+						DevelopmentTeam = V48N5A52YH;
 						LastSwiftMigration = 1120;
 					};
 					2D02E47A1E0B4A5D006451C7 = {
@@ -347,6 +418,27 @@
 			files = (
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
+				CDB5C8D27A914639BC3DB5E7 /* Nunito-Bold.ttf in Resources */,
+				490751400B4845AF9E233A55 /* Nunito-Regular.ttf in Resources */,
+				BACDF8A478464D419EBD45A1 /* AntDesign.ttf in Resources */,
+				8D4587A5EFE2459588A59C39 /* Entypo.ttf in Resources */,
+				63FF0091EF404DF3A9C880D2 /* EvilIcons.ttf in Resources */,
+				1D693EDC74544F26AD21D52B /* Feather.ttf in Resources */,
+				5B237D23351C4154AF22BFAA /* FontAwesome.ttf in Resources */,
+				B5911DDC58F04737A5FF5BC7 /* FontAwesome5_Brands.ttf in Resources */,
+				6F803DF0730C40B2B56E04F8 /* FontAwesome5_Regular.ttf in Resources */,
+				7E2FFE68E85B460CB67EBA13 /* FontAwesome5_Solid.ttf in Resources */,
+				BE4160AAB0844B3993100EF6 /* Fontisto.ttf in Resources */,
+				B43E59660C9147D7B54B54C2 /* Foundation.ttf in Resources */,
+				033296133FDC4147B96E1E8B /* Ionicons.ttf in Resources */,
+				5CC14C7C1B734368859C1D5E /* MaterialCommunityIcons.ttf in Resources */,
+				83E936775A5A444FBB3AB2AA /* MaterialIcons.ttf in Resources */,
+				2234C21C3656469BB6D7FF7F /* Octicons.ttf in Resources */,
+				96540FA6AC724EB4B88EA0D2 /* Roboto_medium.ttf in Resources */,
+				DF34C5097CA74E8A9B49B8D8 /* Roboto.ttf in Resources */,
+				4026240E351A41A683941EF0 /* rubicon-icon-font.ttf in Resources */,
+				7002F2ED6ECD4A789A7B07B3 /* SimpleLineIcons.ttf in Resources */,
+				6BCE3240B48444A7AE0803A4 /* Zocial.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -679,6 +771,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V48N5A52YH;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = PickleRickApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -702,6 +795,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = V48N5A52YH;
 				INFOPLIST_FILE = PickleRickApp/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				OTHER_LDFLAGS = (

@@ -2,9 +2,8 @@ import React, {useEffect} from 'react';
 
 import {
   Container,
-  Separator,
   Content,
-  List,
+  View,
   Card,
   CardItem,
   Thumbnail,
@@ -13,15 +12,17 @@ import {
 } from 'native-base';
 
 // Styles
-import globalStyles from '../styles/global'
+import globalStyles from '../styles/global';
 
+// REDUX
 import {connect} from 'react-redux';
 import {GET_CHARACTER_INFO_REQUEST} from '../models/character/actions';
 
 const mapStateToProps = (state, props) => {
   const {character} = state.character;
   return {
-    character};
+    character,
+  };
 };
 
 const mapDispatchToProps = (dispatch, props) => ({
@@ -34,32 +35,45 @@ const mapDispatchToProps = (dispatch, props) => ({
 });
 
 const CharacterDetailView = ({character, getCharacterInfo}) => {
-
   useEffect(() => {
     getCharacterInfo();
   }, [getCharacterInfo]);
 
-  const {id, name, status, species, gender, image} = character
+  const {id, name, status, species, gender, image} = character;
 
   return (
     <Container style={globalStyles.container}>
       <Content style={globalStyles.content}>
-        <Card>      
-            <CardItem key={id} style={globalStyles.card}>
-              <Body>
+        <Card style={globalStyles.card}>
+          <CardItem key={id} style={globalStyles.card}>
+            <Body>
               <Thumbnail style={globalStyles.image} source={{uri: image}} />
-                <Text style={globalStyles.name}>{name}</Text>
-                <Text>{status}</Text>
-                <Text>{species}</Text>
-                <Text>{gender}</Text>
-              </Body>
-            </CardItem>
+              <Text style={globalStyles.name}>{name}</Text>
+              <View style={globalStyles.detailInfoContainer}>
+                <View style={globalStyles.detailInfoContainers}>
+                  <Text style={globalStyles.detailInfoTitles}>Status: </Text>
+                  <Text style={globalStyles.detailInfoText}>{status}</Text>
+                </View>
+                <View style={globalStyles.detailInfoContainers}>
+                  <Text style={globalStyles.detailInfoTitles}>Specie: </Text>
+                  <Text style={globalStyles.detailInfoText}>{species}</Text>
+                </View>
+                <View style={globalStyles.detailInfoContainers}>
+                  <Text style={globalStyles.detailInfoTitles}>Gender: </Text>
+                  <Text style={globalStyles.detailInfoText}>{gender}</Text>
+                </View>
+              </View>
+            </Body>
+          </CardItem>
         </Card>
       </Content>
     </Container>
   );
 };
 
-const Character = connect(mapStateToProps, mapDispatchToProps)(CharacterDetailView);
+const Character = connect(
+  mapStateToProps,
+  mapDispatchToProps,
+)(CharacterDetailView);
 
 export default Character;
